@@ -5,7 +5,8 @@ import userRouter from './routes/userRouter.js';
 import productRouter from './routes/productRouter.js';
 import dotenv from 'dotenv'
 import orderRouter from './routes/OrderRouter.js';
-import path from 'path'
+import path,{dirname} from 'path'
+import { fileURLToPath } from 'url';
 dotenv.config()
 
 const app = express();
@@ -26,18 +27,20 @@ app.use('/api/products',productRouter)
 app.use('/api/orders',orderRouter)
 
 //Serve static assests if in production
-const __dirname = path.resolve();
+// const __dirname = path.resolve();
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 app.use(express.static(path.join(__dirname, '../frontend/build')))
 if(process.env.NODE_ENV==='production'){
     //set a static folder
-    app.get('*', (req, res) =>
-    res.sendFile(
-        path.join(__dirname,'../frontend/build')
-    )
-  );
+    app.get('*', (req, res) =>{
+      res.sendFile(
+        path.resolve(__dirname, '../frontend', 'build', 'index.html')
+      )
+     } );
 } else {
   app.get('/', (req, res) => {
-    res.send('server ready')
+    res.send('API is running....');
   });
 }
 
