@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {  useState } from 'react';
 import SideBar from '../components/SideBar';
 import Header from '../components/Header';
 import LeftSide from '../components/LeftSide';
@@ -7,9 +7,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { updateprofile } from '../actions/auth';
 import { Link } from 'react-router-dom';
 const Profile = () => {
-  const user = useSelector(state=>state.user.user)
+  const user = useSelector(state=>state.user?.user)
   const [name,setName]=useState(user?.name?user?.name:'')
-  const [mobNo,setMobNo]=useState(user.mobNo?user.mobNo:'')
+  const [mobNo,setMobNo]=useState(user?.mobNo?user?.mobNo:'')
   const [showBtn,setShowBtn]=useState(false)
 const dispatch =useDispatch()
   const handleSubmit=(e)=>{
@@ -39,7 +39,7 @@ if(text==='mob'){
              user?(
                <>
                <div className="profile-photo">
-               <h1>{user.name.charAt(0)}</h1>
+               <h1>{user?.name?.charAt(0)}</h1>
              </div>
              <div className="profile-detail">
                  <form onSubmit={handleSubmit}>
