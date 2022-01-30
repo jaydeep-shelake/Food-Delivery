@@ -1,0 +1,59 @@
+@import './vars.css';
+.black-scree{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(24, 24, 24, 0.345);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+}
+.black-scree.show{
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.5s ease-in-out;
+    animation: popup 0.7s;
+}
+.message-box{
+   width: 300px;
+   height: 300px;
+   padding: 20px; 
+   background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 6px;
+}
+.message-box img{
+    height: 100px;
+    width: 100px;
+    
+}
+.message-box p{
+    margin: 15px 0;
+    font-family: 600;
+}
+.message-box  p.error{
+    color:var(--danger);
+}
+.message-box  p.success{
+    color: var(--success);
+}
+
+@keyframes popup {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.4);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }

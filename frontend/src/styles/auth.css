@@ -1,0 +1,85 @@
+.auth {
+  background: rgb(241, 241, 241);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.auth .logo {
+  position: relative;
+  top: -4rem;
+}
+.auth .logo img {
+  width: 100px;
+  height: 100px;
+}
+.form {
+  width: 360px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-shadow: 0 8px 16px rgb(0 0 0 / 8%);
+}
+.form form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+form input {
+  border: none;
+  outline: none;
+  padding: 12px 10px;
+  background: rgb(241, 241, 241);
+  width: 100%;
+  border-radius: 3px;
+  margin: 10px 0;
+  color: #484848;
+}
+form input::placeholder {
+  color: #484848;
+  font-family: "Poppins", sans-serif;
+}
+form .text {
+  width: 100%;
+  text-align: end;
+  font-size: 15px;
+  padding: 10px 0;
+}
+form .text a {
+  color: #008bdc;
+}
+form button {
+  width: 100%;
+  border-radius: 3px;
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.forget {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.forget a {
+  color: #008bdc;
+}
+.err {
+  color: var(--danger);
+  width: 100%;
+  padding: 5px 8px;
+  border-radius: 3px;
+  background: rgba(243, 79, 79, 0.295);
+  text-align: start;
+  font-size: 12px;
+  font-weight: bold;
+}

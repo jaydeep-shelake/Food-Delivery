@@ -1,0 +1,39 @@
+@import "./vars.css";
+.profile-section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  background: #fff;
+  padding: 60px 20px;
+}
+.profile-photo {
+  width: 200px;
+  height: 200px;
+  background: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+}
+.profile-photo h1 {
+  color: #fff;
+  font-size: 4rem;
+}
+.profile-detail {
+  margin-top: 30px;
+  width: 100%;
+}
+.profile-detail .profile-input {
+  width: 60%;
+  margin: 0 auto;
+}
+.profile-detail .profile-input input {
+  width: 100%;
+}
+.profile-detail button {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 20px;
+}

@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+}
+button {
+  background: #f49001;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+  color: #fff;
+  min-width: 70px;
+  cursor: pointer;
+  font-size: 17px;
+}
+button,
+.add-button {
+  background-position: center;
+  transition: background 0.8s;
+}
+button:hover,
+.add-button:hover {
+  background: #f58d47 radial-gradient(circle, transparent 1%, #f58d47 1%)
+    center/15000%;
+}
+button:active,
+.add-button:active {
+  background-color: #f7b76e;
+  background-size: 100%;
+  transition: background 0s;
+}
+input {
+  outline: none;
+  border: none;
+}
+main {
+  width: 100%;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  border-radius: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #f09312;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #f0971b;
+}

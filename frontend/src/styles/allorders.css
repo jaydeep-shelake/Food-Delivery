@@ -1,0 +1,66 @@
+.mainarea.all-oredrs {
+  height: 100vh;
+}
+.all-orders-area {
+  width: 80%;
+  height: 670px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.display-orders {
+  width: 100%;
+  height: 700px;
+  overflow-y: auto;
+  display: flex;
+  align-content: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.order-detail-card {
+  width: 100%;
+  background: #fff;
+  margin: 20px 0px;
+  padding: 20px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  /* height: 160px; */
+}
+.order-detail-card img {
+  height: 70px;
+  width: 70px;
+}
+.order-detail-card .details {
+  margin-left: 30px;
+}
+.order-detail-card .details h4 {
+  color: rgb(82, 82, 82);
+}
+.order-detail-card .details p {
+  color: rgb(104, 104, 104);
+}
+.order-detail-card .status {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+}
+.order-detail-card .status span {
+  color: rgb(10, 190, 10);
+}
+.order-left-details {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.image-card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 10px 0;
+}

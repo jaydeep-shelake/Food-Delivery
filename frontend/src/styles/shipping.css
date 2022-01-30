@@ -1,0 +1,199 @@
+@import "./vars.css";
+.shipping {
+  background: rgb(241, 241, 241);
+  width: 100%;
+  padding-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.shipping-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+}
+.address {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 55%;
+}
+.add-sec-area {
+  width: 100%;
+}
+.shipping-details .checkout-area {
+  width: 45%;
+}
+.og-add {
+  width: 100%;
+  height: auto;
+  box-shadow: 0 4px 12px 0 rgb(0 0 0 / 5%);
+  background: #fff;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 3px;
+}
+.og-add p {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.og-add span {
+  color: var(--text-gary);
+  font-size: 14px;
+  margin: 3px 0;
+}
+.og-add .btns {
+  margin-top: 10px;
+}
+.og-add .btns button {
+  border-radius: 3px;
+  margin: 0 10px;
+}
+.add-address {
+  padding: 20px;
+  border: 1px dashed rgb(163, 163, 163);
+  background: #fff;
+  border-radius: 3px;
+
+  cursor: pointer;
+}
+.add-address .add {
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.add p {
+  font-weight: 600;
+}
+.add svg {
+  font-size: 28px;
+}
+.progress {
+  width: 100%;
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.status {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.status p {
+  margin: 0 10px;
+  color: var(--text-gary);
+}
+.status p.active {
+  color: var(--primary);
+  border-bottom: 2px solid var(--primary);
+}
+.status .divider {
+  display: inline-block;
+  border-top: 1px dashed #696b79;
+  height: 4px;
+  width: 10%;
+  margin-top: 5px;
+}
+.address-form {
+  width: 400px;
+  padding: 20px;
+  background: #fff;
+}
+.address-form .submit-btn {
+  width: 100%;
+}
+.address-form button {
+  width: 100%;
+  border-radius: 3px;
+  padding: 10px 20px;
+  margin-top: 20px;
+}
+.selected {
+  border: 2px solid var(--primary);
+}
+.payments-opts {
+  width: 100%;
+  background: #ffffff;
+  padding: 20px;
+  margin-top: 20px;
+}
+.select-opt {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 12px 15px;
+  background: #eaeaec;
+  margin: 10px 0;
+}
+.select-opt label {
+  margin-left: 10px;
+}
+.address .cart-area {
+  padding: 0px;
+  width: 100%;
+}
+.address .cart-area .all-items {
+  width: 100%;
+}
+.address .cart-area .cart-card {
+  width: 100%;
+  border-radius: 3px;
+  justify-content: flex-start;
+}
+.address .cart-area .cart-card .img {
+  background: #eaeaec;
+  border-radius: 3px;
+}
+.address .cart-area .cart-card .img img {
+  border-radius: 3px;
+}
+.address .cart-area .cart-card p,
+.address .cart-area .cart-card span {
+  color: var(--text-gary);
+}
+.address .cart-area .cart-card p.des {
+  font-size: 13px;
+  padding-top: 10px;
+}
+.shipping .skeleton-wrapper {
+  margin-top: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.shipping .skeleton.title {
+  height: 42px;
+}
+.shipping .billing {
+  margin-bottom: 20px;
+}
+.razorpay {
+  width: 400px;
+  padding: 8px 0px;
+  margin-left: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #212fa7;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+}
+.razorpay img {
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+}

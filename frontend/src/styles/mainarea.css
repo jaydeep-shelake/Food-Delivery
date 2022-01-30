@@ -1,0 +1,235 @@
+@import "./vars.css";
+.mainarea {
+  width: 63%;
+  height: 100%;
+  background: rgb(241, 241, 241);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 20px 40px;
+  margin-left: 6rem;
+}
+.header {
+  width: 100%;
+  height: 70px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  width: 300px;
+  border-radius: 30px;
+  padding: 0px 20px;
+}
+.header img {
+  width: 50px;
+  height: 50px;
+}
+.header .input svg {
+  width: 10%;
+  color: var(--text-gary);
+  font-size: 18px;
+}
+.header input {
+  width: 90%;
+  background: transparent;
+  padding: 10px 0px;
+}
+.header input::placeholder {
+  color: var(--text-gary);
+  font-family: "Poppins", sans-serif;
+}
+.banner {
+  width: 100%;
+  height: 250px;
+  background: var(--secondary);
+  border-radius: 20px;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px;
+  position: relative;
+}
+.banner p {
+  color: rgb(128, 127, 127);
+  font-weight: 600;
+  margin: 10px 0px;
+}
+.banner p span {
+  color: var(--primary);
+}
+.banner .img img {
+  height: 220px;
+  width: 230px;
+}
+.banner .text {
+  margin-left: 4rem;
+}
+.banner button {
+  padding: 8px 20px;
+  margin-top: 10px;
+}
+.banner .text .circle {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+}
+.banner .text .circle.full {
+  top: 30px;
+  right: 20px;
+}
+.banner .text .circle.small {
+  height: 50px;
+  width: 50px;
+  bottom: 30px;
+  right: 60px;
+}
+.banner .text .circle.smaller {
+  height: 20px;
+  width: 20px;
+  bottom: 70px;
+  right: 120px;
+}
+.banner .text .circle.half {
+  height: 50px;
+  width: 50px;
+  top: 0px;
+  right: 120px;
+}
+.category-area {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-top: 3rem;
+}
+.category-area .category {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 2rem;
+}
+.category-area .category .cat-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  width: 90px;
+  border-radius: 10px;
+  background-color: #fff;
+  margin: 0 2rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.category-area .category .cat-icon.active,
+.category-area .category .cat-icon:hover {
+  background: var(--primary);
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.category-area .category .cat-icon:nth-child(1) {
+  margin-left: 0px;
+}
+.category-area .category .cat-icon .img {
+  padding: 10px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px 0px;
+}
+.category-area .category .cat-icon img {
+  width: 30px;
+  height: 30px;
+}
+.all-products {
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+.all-products .product-card {
+  width: 200px;
+  padding: 15px;
+  border-radius: 10px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 30px;
+  position: relative;
+}
+.product-card .love {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 7px;
+  background: rgba(241, 115, 115, 0.34);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.product-card .love svg {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--danger);
+}
+.product-card .add-button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary);
+  color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 10px #f48f0156;
+  cursor: pointer;
+}
+.all-products .product-card:nth-child(1) {
+  margin-left: 0px;
+}
+.all-products .product-card img {
+  width: 150px;
+  height: 150px;
+}
+.all-products .product-card .des {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.product-card .des h3 {
+  color: var(--text-gary);
+  font-size: 16px;
+  text-transform: initial;
+}
+.product-card .des .starts svg {
+  font-size: 13px;
+  color: var(--primary);
+}
+.product-card .des .price {
+  font-size: 15px;
+}
+.product-card .des .price span {
+  font-size: 12px;
+  color: var(--primary);
+}

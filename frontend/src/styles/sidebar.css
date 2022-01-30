@@ -1,0 +1,48 @@
+@import "./vars.css";
+.sidebar {
+  height: 100%;
+  width: 6%;
+  background-color: #fff;
+  padding: 10px;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.top-icon {
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.sidebar .icon {
+  padding: 12px 12px;
+  margin: 20px 0;
+  border-radius: 50%;
+  background: #fff;
+  color: rgb(161, 161, 161);
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.sidebar .icon:nth-child(1) {
+  margin-top: 15px;
+}
+.sidebar .icon:hover {
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0px 0px 10px var(--primary);
+  transition: all 0.3s ease-in-out;
+}
+
+.sidebar .icon.active {
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0px 0px 10px var(--primary);
+}
