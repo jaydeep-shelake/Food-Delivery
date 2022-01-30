@@ -5,6 +5,7 @@ import LeftSide from '../components/LeftSide';
 import '../styles/profile.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateprofile } from '../actions/auth';
+import { Link } from 'react-router-dom';
 const Profile = () => {
   const user = useSelector(state=>state.user.user)
   const [name,setName]=useState(user?.name?user?.name:'')
@@ -34,7 +35,10 @@ if(text==='mob'){
        <div className='mainarea all-oredrs'>
          <Header/>
          <div className="profile-section">
-             <div className="profile-photo">
+           {
+             user?(
+               <>
+               <div className="profile-photo">
                <h1>{user.name.charAt(0)}</h1>
              </div>
              <div className="profile-detail">
@@ -54,6 +58,15 @@ if(text==='mob'){
                      {showBtn&&<button type='submit'>UPDATE</button>}
                  </form>
              </div>
+             </>
+             ):(
+               <div>
+                 <h1>You are not Logged In!,Please Login</h1>
+                 <Link to="/signin"><button>Login</button></Link>
+                 </div>
+             )
+           }
+             
          </div>
        </div>
        <LeftSide/>
