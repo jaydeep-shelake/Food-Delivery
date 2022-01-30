@@ -6,7 +6,8 @@
 <br>
 
 > Food Delivery app made using MERN stack (UNDER DEVLOPEMENT) <br>
-> APP uses morden React and NodeJS features like Skeleton , React Portals ,
+> APP uses morden React and NodeJS features like Modules ,Skeletons , React Portals ,Redux thunk<br>
+> Followed MVC architecture and microservices for serever side
 
 ## ⚙️ Detailed Functionality
 
@@ -22,7 +23,7 @@
 ## 🚀 Tech and Tools Used
 
 - React.JS ,Redux ,NodeJS ,ExpressJs,MongoDB
-- VS code
+- VS code,Heruko
 - React Icons,REST APIS ,JWT ,GoogleAPIs,Yup
 
 ## 📸 Screenshots
