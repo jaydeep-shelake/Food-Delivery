@@ -21,7 +21,7 @@ mongoose.connect(uri,
         console.log('connected...')
     });
 
-app.use(cors())
+// app.use(cors())
 app.use('/api/users',userRouter);
 app.use('/api/products',productRouter)
 app.use('/api/orders',orderRouter)
