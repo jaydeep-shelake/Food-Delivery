@@ -26,6 +26,7 @@ app.use('/api/products',productRouter)
 app.use('/api/orders',orderRouter)
 
 //Serve static assests if in production
+const __dirname = path.resolve();
 app.use(express.static(path.join(__dirname, '../frontend/build')))
 if(process.env.NODE_ENV==='production'){
     //set a static folder
