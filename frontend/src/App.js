@@ -11,6 +11,7 @@ import OrderSummry from './pages/OrderSummry'
 import OrderDetails from './pages/OrderDetails'
 import AllOrders from './pages/AllOrders'
 import Profile from './pages/Profile'
+import Search from './pages/Search'
 const App = () => {
     return (
         
@@ -28,6 +29,7 @@ const App = () => {
               <Route path="/order/:id" element={<OrderDetails/>}/>
               <Route path="/orders" element={<AllOrders/>}/>
               <Route path="/profile" element={<Profile/>}/>
+              <Route path="/search" element={<Search/>}/>
 
             </Routes>
              </main>

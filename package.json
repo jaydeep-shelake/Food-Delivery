@@ -8,8 +8,8 @@
     "build": "cd frontend && npm run build",
     "install-client": "cd frontend && npm install ",
     "heroku-postbuild": "npm run install-client && npm run build",
-    "start": "node ./backend/server.js",
-    "client": "cd frontend && npm start"
+    "client": "cd frontend && npm start",
+    "start": "node ./backend/server.js"
   },
   "keywords": [],
   "author": "",
@@ -23,7 +23,8 @@
     "googleapis": "^92.0.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.1.6",
-    "nodemailer": "^6.7.2"
+    "nodemailer": "^6.7.2",
+    "socket.io": "^4.4.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"

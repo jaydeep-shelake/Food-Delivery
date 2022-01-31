@@ -233,3 +233,6 @@
   font-size: 12px;
   color: var(--primary);
 }
+.search-bar input {
+  padding: 2px 0;
+}

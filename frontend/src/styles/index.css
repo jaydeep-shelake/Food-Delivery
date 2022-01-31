@@ -69,3 +69,9 @@ main {
 ::-webkit-scrollbar-thumb:hover {
   background: #f0971b;
 }
+.search .all-products {
+  height: auto !important;
+}
+.search .all-products .product-card {
+  margin: 30px;
+}

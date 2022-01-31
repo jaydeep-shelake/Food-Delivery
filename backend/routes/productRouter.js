@@ -10,6 +10,17 @@ productRouter.get('/',expressAsyncHandler(async(req,res)=>{
   res.send(products)
 }));
 
+productRouter.get('/search',expressAsyncHandler(async(req,res)=>{
+    let regEx = new RegExp(req.query.name,'i');
+    const serachedProducts = await Product.find({name:regEx})
+    if(serachedProducts){
+        res.send(serachedProducts)
+
+    }else{
+      res.status(402).send({message:'Opps No product found!!'})
+    }
+   }))
+
 productRouter.get('/seed',
 expressAsyncHandler(async (req,res)=>{
     const createProducts = await Product.insertMany(data.products)
@@ -25,4 +36,6 @@ productRouter.get('/:id',expressAsyncHandler(async(req,res)=>{
         res.status(404).send({message:'Product not found!'})
     }
 }))
+
+
 export default productRouter

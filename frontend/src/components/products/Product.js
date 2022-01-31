@@ -8,10 +8,12 @@ const Product = ({category}) => {
   const dispatch=useDispatch()
   const allPizzas= useSelector(state=>state.allPizza)
   const {loading,error,data}=allPizzas
-console.log(category)
+// console.log(category)
   const [show,setShow]=useState(error)
     useEffect(()=>{
-     dispatch(fetchPizzas(category))
+      if(category){
+        dispatch(fetchPizzas(category))
+      }
     },[category])
     
     return (

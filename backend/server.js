@@ -1,5 +1,5 @@
 import express from 'express';
-import cors from 'cors'
+// import cors from 'cors'
 import mongoose from 'mongoose'
 import userRouter from './routes/userRouter.js';
 import productRouter from './routes/productRouter.js';
