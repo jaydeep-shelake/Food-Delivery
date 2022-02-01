@@ -1,10 +1,10 @@
 import {TailSpin} from "react-loader-spinner";
 import React from 'react';
 
-const Spinner = () => {
+const Spinner = ({color}) => {
     return (
         <> 
-        <TailSpin color="#fff" height={20} width={20} />
+        <TailSpin color={color?color:'#fff'} height={20} width={20} />
         </>
     )
 }

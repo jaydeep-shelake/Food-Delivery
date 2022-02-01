@@ -1,0 +1,34 @@
+import pizza from "../apis/pizza"
+import { ADD_WISHLIST_ERROR, ADD_WISHLIST_REQ, ADD_WISHLIST_SUCCESS ,GET_WISHLIST} from "./types"
+
+export const addToWishlist =(item)=>async (dispatch,getState)=>{
+    console.log(item)
+    dispatch({type:ADD_WISHLIST_REQ,payload:item})
+try {
+    const user = getState().user?.user;
+    const {data}=await pizza.post('/api/products/wishlist',item,{
+        headers:{
+            Authorization: `Bearer ${user.token}` 
+         }
+    })
+    console.log(data)
+    dispatch({type:ADD_WISHLIST_SUCCESS,payload:data})
+} catch (error) {
+    dispatch({type:ADD_WISHLIST_ERROR,payload:error.response&&error.response.data.message?error.response.data.message:error.message})
+}
+}
+
+export const  getWishlist=()=>async (dispatch,getState)=>{
+    try {
+        const user = getState().user?.user;
+        const {data}=await pizza.get('/api/products/wishlist',{
+            headers:{
+                Authorization: `Bearer ${user.token}` 
+             }
+        })
+        dispatch({type:GET_WISHLIST,payload:data})
+    } catch (error) {
+    dispatch({type:ADD_WISHLIST_ERROR,payload:error.response&&error.response.data.message?error.response.data.message:error.message})
+        
+    }
+}

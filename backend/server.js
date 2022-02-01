@@ -1,5 +1,5 @@
 import express from 'express';
-// import cors from 'cors'
+import cors from 'cors'
 import mongoose from 'mongoose'
 import userRouter from './routes/userRouter.js';
 import productRouter from './routes/productRouter.js';
@@ -21,7 +21,7 @@ mongoose.connect(uri,
         console.log('connected...')
     });
 
-// app.use(cors())
+app.use(cors())
 app.use('/api/users',userRouter);
 app.use('/api/products',productRouter)
 app.use('/api/orders',orderRouter)
