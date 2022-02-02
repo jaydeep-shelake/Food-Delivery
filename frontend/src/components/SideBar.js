@@ -27,9 +27,9 @@ const SideBar = () => {
             <Link to="/orders"><div className={`icon ${path==='/orders'&&'active'}`}>
                 <FaBoxOpen/>
             </div></Link>
-            <div className="icon">
+            <Link to='/wishlist'> <div className={`icon ${path==='/wishlist'&&'active'}`}>
                 <BsHeartHalf/>
-            </div>
+            </div></Link>
             <div className="icon">
                 <CgFileDocument/>
             </div>

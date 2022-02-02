@@ -49,6 +49,11 @@ productRouter.get('/wishlist',isAuth,expressAsyncHandler(async(req,res)=>{
     res.send(items)
 
 }))
+productRouter.delete('/wishlist/:id',isAuth,expressAsyncHandler(async(req,res)=>{
+    const items = await Wishlist.deleteOne({productId:req.params.id});
+    res.send(req.params.id)
+
+}))
 
 productRouter.get('/seed',
 expressAsyncHandler(async (req,res)=>{

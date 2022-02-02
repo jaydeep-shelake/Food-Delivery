@@ -12,6 +12,7 @@ import OrderDetails from './pages/OrderDetails'
 import AllOrders from './pages/AllOrders'
 import Profile from './pages/Profile'
 import Search from './pages/Search'
+import Wishlist from './pages/Wishlist'
 const App = () => {
     return (
         
@@ -30,6 +31,7 @@ const App = () => {
               <Route path="/orders" element={<AllOrders/>}/>
               <Route path="/profile" element={<Profile/>}/>
               <Route path="/search" element={<Search/>}/>
+              <Route path="/wishlist" element={<Wishlist/>}/>
 
             </Routes>
              </main>

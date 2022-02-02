@@ -183,6 +183,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+  cursor: pointer;
 }
 .product-card .love svg {
   font-size: 18px;
