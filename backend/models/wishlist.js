@@ -27,7 +27,7 @@ const wishListSchema = new moongoose.Schema({
         ref:'User',
         required:true
     },
-    productId:{
+    product:{
         type:moongoose.Schema.Types.ObjectId,
         ref:'Product',
         required:true

@@ -10,7 +10,7 @@ export const wishlistReducer = (state={loading:false,wishlistItems:[]},action)=>
          return{...state,loading:false,wishlistItems:action.payload}
     case DELETE_WISHLIST_ITEM:
         const id=action.payload
-        return{...state,loading:false,wishlistItems:state?.wishlistItems.filter(item=>item.productId!==id)}
+        return{...state,loading:false,wishlistItems:state?.wishlistItems.filter(item=>item.product!==id)}
      case ADD_WISHLIST_ERROR:
          return{...state,loading:false,error:action.payload}
      default:

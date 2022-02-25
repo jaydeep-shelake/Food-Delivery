@@ -5,6 +5,7 @@ import {signInReducer,signUpReducer} from './authReducer'
 import { addressReducer } from "./addressReducer";
 import { orderReducer,orderDetail, searchItems } from "./odersReducer";
 import { wishlistReducer } from "./wishlistReducer";
+import { sidebarReducer } from "./sidebarreducer";
 export default combineReducers({
     allPizza:pizzaReducer,
     cart:cartReducer,
@@ -14,5 +15,6 @@ export default combineReducers({
     order:orderReducer,
     orderDetails:orderDetail,
     search:searchItems,
-    wishlist:wishlistReducer
+    wishlist:wishlistReducer,
+    sidebar:sidebarReducer
 })

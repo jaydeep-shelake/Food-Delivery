@@ -46,3 +46,27 @@
   color: #fff;
   box-shadow: 0px 0px 10px var(--primary);
 }
+.close {
+  display: none;
+  position: absolute;
+  top: 30px;
+  right: 20px;
+}
+.close svg {
+  font-size: 22px;
+}
+@media (max-width: 1104px) {
+  .sidebar {
+    width: 100%;
+    left: -100%;
+    transition: all 0.3s ease-in-out;
+  }
+  .sidebar.showSideBar {
+    left: 0px;
+    transition: all 0.3s ease-in-out;
+  }
+  .close {
+    display: block;
+    color: gray;
+  }
+}

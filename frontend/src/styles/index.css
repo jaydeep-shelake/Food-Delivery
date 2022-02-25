@@ -51,7 +51,7 @@ main {
   justify-content: flex-start;
 }
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 5px;
   border-radius: 4px;
 }
 

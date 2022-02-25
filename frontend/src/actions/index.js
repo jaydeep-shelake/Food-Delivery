@@ -1,5 +1,5 @@
 import pizza from "../apis/pizza"
-import { ERROR, FETCH_PIZZAS, FETCH_PIZZAS_SUCCESS, SEARCH_SUCCESS, SERACH_ERROR, SHEARCH_REQ } from "./types"
+import { ERROR, FETCH_PIZZAS, FETCH_PIZZAS_SUCCESS, SEARCH_SUCCESS, SERACH_ERROR, SHEARCH_REQ, SHOW_SIDEBAR } from "./types"
 
 export const fetchPizzas=(category)=>async dispatch=>{
   dispatch({type:FETCH_PIZZAS,payload:[]})
@@ -23,4 +23,8 @@ export const searchProducts =(name)=>async dispatch=>{
   catch(error){
   dispatch({type:SERACH_ERROR,payload:error.response&&error.response.data.message?error.response.data.message:error.message})
   }
+}
+
+export const showSideBar=(boolean)=>{
+  return {type:SHOW_SIDEBAR,payload:boolean}
 }

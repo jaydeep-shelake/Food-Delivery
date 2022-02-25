@@ -126,3 +126,10 @@
 .sidebar-msg .img img {
   width: 300px;
 }
+
+@media (max-width: 1104px) {
+  .leftside {
+    width: 0px;
+    display: none;
+  }
+}

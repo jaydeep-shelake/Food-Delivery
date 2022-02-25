@@ -59,10 +59,10 @@ const ProductCard = ({product}) => {
       if(wishlist.loading===true && item._id===currenItemClicked){
           return <Spinner color={'#eb3d34'}/>
       }
-      if((wishlist.wishlistItems?.find(x=>x.productId === item._id)&&wishlist.wishlistItems?.find(x=>x.userId === user?._id))&&item._id===i){
+      if((wishlist.wishlistItems?.find(x=>x.product === item._id)&&wishlist.wishlistItems?.find(x=>x.userId === user?._id))&&item._id===i){
         return <AiFillHeart/>
     }
-    if(wishlist.wishlistItems?.find(x=>x.productId !== item._id) && wishlist.loading===false){
+    if(wishlist.wishlistItems?.find(x=>x.product !== item._id) && wishlist.loading===false){
         return <AiOutlineHeart/>;
       }
       else{

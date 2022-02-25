@@ -36,7 +36,7 @@ productRouter.post('/wishlist',isAuth,expressAsyncHandler(async(req,res)=>{
         rating:req.body.rating,
         description:req.body.description,
         userId:req.user._id,
-        productId:req.body._id
+        product:req.body._id
     })
     const wishlistItem = await newItem.save();
     res.send(wishlistItem)
