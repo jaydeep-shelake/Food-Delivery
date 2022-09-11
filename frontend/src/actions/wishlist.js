@@ -8,7 +8,7 @@ try {
     const user = getState().user?.user;
     const {data}=await pizza.post('/api/products/wishlist',item,{
         headers:{
-            Authorization: `Bearer ${user.token}` 
+            Authorization: `Bearer ${user.token}`
          }
     })
     // console.log(data)

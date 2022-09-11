@@ -5,6 +5,7 @@ import {IoMdAdd} from 'react-icons/io';
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCart } from '../../actions/cart';
 import { addToWishlist ,deleteItemFromWishlist,getWishlist} from '../../actions/wishlist';
+import { useLocation } from 'react-router-dom';
 import Spinner from '../Spinner';
 const ProductCard = ({product}) => {
     //   const navigate = useNavigate()
@@ -17,6 +18,9 @@ const ProductCard = ({product}) => {
          dispatch(addToCart(item))
         //  navigate('/cart')
     }
+
+    const pathname= useLocation().pathname
+    
 
     const handleWishlist=(item)=>{
         setCurrenItem(item._id)
@@ -69,7 +73,7 @@ const ProductCard = ({product}) => {
         return <AiOutlineHeart/>;
 
       }
-     
+     //61e3cbffaba4686f0942e2f1
       
     }
     return (
@@ -77,9 +81,9 @@ const ProductCard = ({product}) => {
             {
                 product?.map((item,i)=>(
                   <div key={i} className='product-card'>
-                      <div className="love" value={item._id} onClick={(e)=>wishlist?.wishlistItems?.find(x=>x.productId=== item._id)?handleRemoveWishlist(item._id) :handleWishlist(item)}>
+                      {pathname!=="/wishlist"&&<div className="love" value={item._id} onClick={(e)=>wishlist?.wishlistItems?.find(x=>x.product=== item._id)?handleRemoveWishlist(item._id) :handleWishlist(item)}>
                           {getState(item,item._id)}
-                      </div>
+                      </div>}
                       <div className="img">
                           <img src={item?.image} alt="" />
                       </div>

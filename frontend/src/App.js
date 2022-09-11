@@ -13,6 +13,7 @@ import AllOrders from './pages/AllOrders'
 import Profile from './pages/Profile'
 import Search from './pages/Search'
 import Wishlist from './pages/Wishlist'
+import CustomPizza from './pages/CustomPizza'
 const App = () => {
     return (
         
@@ -32,7 +33,7 @@ const App = () => {
               <Route path="/profile" element={<Profile/>}/>
               <Route path="/search" element={<Search/>}/>
               <Route path="/wishlist" element={<Wishlist/>}/>
-
+              <Route path='/custom-pizza' element={<CustomPizza/>}/>
             </Routes>
              </main>
             </Fragment>

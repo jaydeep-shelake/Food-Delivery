@@ -36,6 +36,7 @@ const Cart = () => {
                        ))}
                       </div>
                       <div className="checkout-area">
+                        
                       <div className="billing">
                         <h4>PRICE DETAILS</h4>
                         <div className="details">

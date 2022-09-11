@@ -12,6 +12,8 @@ export const addToCart=(item)=>async (dispatch,getState)=>{
          image:item.image,
          description:item.description,
          product:item._id,
+         customItem:item.customItem?item.customItem:[],
+         isCustom:item.isCustom?item.isCustom:false,
          qty:1
         }
         })

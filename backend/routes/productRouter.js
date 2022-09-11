@@ -24,7 +24,7 @@ productRouter.get('/search',expressAsyncHandler(async(req,res)=>{
    }))
 
 productRouter.post('/wishlist',isAuth,expressAsyncHandler(async(req,res)=>{
- const item = await Wishlist.findOne({productId:req.body._id});
+ const item = await Wishlist.findOne({product:req.body._id});
  if(item){
   res.status(409).send({message:'Item Already exits'});
  }
