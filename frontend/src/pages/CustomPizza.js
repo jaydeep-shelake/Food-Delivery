@@ -1,5 +1,4 @@
 import React ,{useState,useEffect,useRef} from 'react'
-import Resizer from "react-image-file-resizer";
 import SideBar from '../components/SideBar';
 import Header from '../components/Header';
 import LeftSide from '../components/LeftSide';

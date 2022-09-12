@@ -14,6 +14,7 @@ import Profile from './pages/Profile'
 import Search from './pages/Search'
 import Wishlist from './pages/Wishlist'
 import CustomPizza from './pages/CustomPizza'
+import Address from './pages/Address'
 const App = () => {
     return (
         
@@ -34,6 +35,7 @@ const App = () => {
               <Route path="/search" element={<Search/>}/>
               <Route path="/wishlist" element={<Wishlist/>}/>
               <Route path='/custom-pizza' element={<CustomPizza/>}/>
+              <Route path="/your-address" element={<Address/>}/>
             </Routes>
              </main>
             </Fragment>
