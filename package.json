@@ -9,7 +9,7 @@
     "install-client": "cd frontend && npm install ",
     "heroku-postbuild": "npm run install-client && npm run build",
     "client": "cd frontend && npm start",
-    "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
+    "start": "node backend/server.js"
   },
   "keywords": [],
   "author": "",
