@@ -1,0 +1,36 @@
+@import "./vars.css";
+
+.admin-item{
+    width: 90%;
+    background: #fff;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.345);
+    margin: 15px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
+    border-radius: 12px;
+}
+.admin-items{
+    width: 100%;
+}
+.admin-item img{
+    width: 70px;
+    height: 70px;
+}
+.handleBtn{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.handleBtn .btn{
+    background: var( --primary);
+    color: #fff;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    cursor: pointer;
+    
+}

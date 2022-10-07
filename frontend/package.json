@@ -9,6 +9,7 @@
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.24.0",
+    "firebase": "^9.10.0",
     "html2canvas": "^1.4.1",
     "icons": "^1.0.0",
     "react": "^17.0.2",

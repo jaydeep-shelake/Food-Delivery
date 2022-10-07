@@ -126,6 +126,20 @@
 .sidebar-msg .img img {
   width: 300px;
 }
+.waring-noti {
+  position: fixed;
+  top: 80px;
+}
+.waring-noti div{
+  background: rgba(255, 0, 0, 0.411);
+  color: #fff;
+  font-size: 17px;
+  border-radius: 6px;
+  padding: 8px;
+  
+  margin: 10px;
+  
+}
 
 @media (max-width: 1104px) {
   .leftside {

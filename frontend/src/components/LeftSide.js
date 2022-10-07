@@ -6,11 +6,13 @@ import {Link} from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import CartItemCard from './CartItemCard'
 import delivery from '../assests/delivery.png'
-const LeftSide = () => {
+const LeftSide = ({data}) => {
     const cartItems = useSelector(state=>state.cart.cartItems)
     const user = useSelector(state=>state.user)
 
     // console.log(cartItems)
+    
+
     return (
         <div className='leftside'>
             <div className="header">
@@ -27,9 +29,21 @@ const LeftSide = () => {
                       <span>{cartItems?cartItems?.length:0}</span>
                       <BsCart3/>
                   </div></Link>
-                  <div className="icon">
+                  <div className="icon" >
+                    
                       <span>1</span>
                       <IoNotificationsOutline/>
+                      
+                  </div>
+                  <div className='waring-noti'>
+                  {
+                        data.map((item,i)=>{
+                            if(item.inStockItem<=3){
+                                return <div  key={i}>{item.name} has came to end</div>
+                            }
+                            
+                        })
+                      }
                   </div>
             </div>
             <div className="sidebar-msg">
