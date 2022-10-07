@@ -37,7 +37,7 @@ const LeftSide = ({data}) => {
                   </div>
                   <div className='waring-noti'>
                   {
-                        data.map((item,i)=>{
+                        data?.map((item,i)=>{
                             if(item.inStockItem<=3){
                                 return <div  key={i}>{item.name} has came to end</div>
                             }
