@@ -16,6 +16,8 @@ import Wishlist from './pages/Wishlist'
 import CustomPizza from './pages/CustomPizza'
 import Address from './pages/Address'
 import Admin from './pages/Admin'
+import AdminOrders from './pages/AdminOrders'
+import AddProduct from './pages/AddProduct'
 const App = () => {
     return (
         
@@ -38,6 +40,8 @@ const App = () => {
               <Route path='/custom-pizza' element={<CustomPizza/>}/>
               <Route path="/your-address" element={<Address/>}/>
               <Route path='/admin-side' element={<Admin/>}/>
+              <Route path='/admin-orders' element={<AdminOrders/>}/>
+              <Route path='/add-product' element={<AddProduct/>}/>
             </Routes>
              </main>
             </Fragment>

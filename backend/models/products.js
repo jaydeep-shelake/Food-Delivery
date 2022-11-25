@@ -16,7 +16,7 @@ const productSchema = new mongoose.Schema({
     },
     type:{
         type:String,
-        required:true,
+        default:"Veg"
     },
     price:{
         type:Number,
@@ -24,7 +24,7 @@ const productSchema = new mongoose.Schema({
     },
     rating:{
         type:Number,
-        required:true,
+        default:5
     },
     description:{
         type:String,
@@ -32,7 +32,7 @@ const productSchema = new mongoose.Schema({
     },
     countInStock:{
         type:Number,
-        required:true
+        
     }
 },{
     timestamps:true

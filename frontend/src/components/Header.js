@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import {FiSearch} from 'react-icons/fi'
 import {HiMenuAlt1} from 'react-icons/hi'
-import {useNavigate} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 import {useDispatch, useSelector} from 'react-redux'
 import { searchProducts, showSideBar } from '../actions'
 import Spinner from './Spinner'
@@ -23,7 +23,7 @@ const Header = () => {
                <HiMenuAlt1/>
               </div>
 
-              <img src="https://cdn-icons-png.flaticon.com/512/4039/4039232.png" alt="logo" />
+              <Link to="/"><img src="https://cdn-icons-png.flaticon.com/512/4039/4039232.png" alt="logo" /></Link>
             </div>
             <form onSubmit={handleSearch} className="search-bar">
                 <div className="input">

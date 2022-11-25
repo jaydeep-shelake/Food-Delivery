@@ -14,6 +14,9 @@ export const fetchPizzas=(category)=>async dispatch=>{
   
 }
 
+
+
+
 export const searchProducts =(name)=>async dispatch=>{
   dispatch({type:SHEARCH_REQ})
   try{

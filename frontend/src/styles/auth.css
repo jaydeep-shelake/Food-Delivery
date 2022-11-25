@@ -33,7 +33,7 @@
   align-items: center;
   justify-content: center;
 }
-form input {
+form input , form label {
   border: none;
   outline: none;
   padding: 12px 10px;
@@ -42,6 +42,9 @@ form input {
   border-radius: 3px;
   margin: 10px 0;
   color: #484848;
+}
+form label {
+  font-size: 13px;
 }
 form input::placeholder {
   color: #484848;
@@ -82,4 +85,7 @@ form button {
   text-align: start;
   font-size: 12px;
   font-weight: bold;
+}
+input[type="file"]{
+  display: none;
 }

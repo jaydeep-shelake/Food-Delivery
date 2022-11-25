@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import { getOrderDetails } from '../actions/orders';
 import OrderDetail from '../skeleton/OrderDetail';
 import Message from '../components/Message'
+import SideBar from '../components/SideBar';
 const OrderDetails = () => {
     const params=useParams()
     const {id}=params;
@@ -22,7 +23,7 @@ const OrderDetails = () => {
   return (
       <>
     <div className='shipping'>
-   
+   <SideBar/>
 {!loading?(<div className="shipping-details">
 <div className="shippingshippingAddress">
 <h3>ORDER DETAILS</h3>

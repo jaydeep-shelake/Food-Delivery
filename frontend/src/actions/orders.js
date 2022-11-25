@@ -23,8 +23,8 @@ export const placeOrder=(order)=> async (dispatch,getState)=>{
          console.log("exicution")
          const docRef = doc(firestore, db.pizzas,item.name);
         getDoc(docRef).then((docSnap)=>{
+           console.log(docSnap.data())
          const inStockItem= docSnap.data().inStockItem
-         console.log(inStockItem)
           const ref = doc(firestore,db.pizzas,item.name);
           updateDoc(ref, {
             inStockItem: inStockItem-item.qty

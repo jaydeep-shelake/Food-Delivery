@@ -1,15 +1,19 @@
 import React, { useEffect ,useState } from 'react'
 import SideBar from '../components/SideBar';
+import {IoNotificationsOutline} from 'react-icons/io5'
+import { getDoc } from 'firebase/firestore';
 import Header from '../components/Header';
 import { collection,onSnapshot} from "firebase/firestore";
 import { doc, updateDoc} from "firebase/firestore";
 import { db,firestore } from '../firebase';
 import {IoMdAdd,IoMdRemove} from 'react-icons/io'
+import LeftSide from '../components/LeftSide'
 import '../styles/admin.css'
-import LeftSide from '../components/LeftSide';
+
 const Admin = () => {
    let [data,setData]=useState([])
     useEffect(()=>{
+      
       getData()
     },[])
     const getData=async()=>{
@@ -45,7 +49,7 @@ const Admin = () => {
   return (
     <> 
      <SideBar/>   
-    <div className='mainarea'>
+    <div className='mainarea admin '>
     <Header/>
     <div className="admin-items">
         <div className="admin-item">
@@ -71,7 +75,7 @@ const Admin = () => {
      }
     </div>
     </div>
-    <LeftSide data={data}/>
+    <LeftSide data={data} show/>
     </>
 
   )

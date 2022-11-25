@@ -25,7 +25,7 @@ const Search = () => {
       <SideBar/>
        <div className='mainarea  main-search'>
          <Header/>
-         <h3>search result: {data?.length} for a</h3>
+         <h3>search result: {data?.length} for {query}</h3>
          <div className="all-list search">
          <div className='all-products'>
           {loading?(

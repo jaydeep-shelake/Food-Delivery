@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../styles/leftside.css'
 import {BsCart3,BsFillArrowRightSquareFill} from 'react-icons/bs'
 import {IoNotificationsOutline} from 'react-icons/io5'
@@ -6,10 +6,10 @@ import {Link} from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import CartItemCard from './CartItemCard'
 import delivery from '../assests/delivery.png'
-const LeftSide = ({data}) => {
+const LeftSide = ({data ,show}) => {
     const cartItems = useSelector(state=>state.cart.cartItems)
     const user = useSelector(state=>state.user)
-
+  const [showNoti,setShow]=useState(false)
     // console.log(cartItems)
     
 
@@ -29,13 +29,13 @@ const LeftSide = ({data}) => {
                       <span>{cartItems?cartItems?.length:0}</span>
                       <BsCart3/>
                   </div></Link>
-                  <div className="icon" >
+                  <div className="icon" onClick={()=>setShow(!showNoti)} >
                     
-                      <span>1</span>
+                  {  data?.length===undefined?null:<span>{data?.filter(item=>item.inStockItem<=3).length} </span>}
                       <IoNotificationsOutline/>
                       
                   </div>
-                  <div className='waring-noti'>
+                  {showNoti&&(<div className='waring-noti'>
                   {
                         data?.map((item,i)=>{
                             if(item.inStockItem<=3){
@@ -44,17 +44,17 @@ const LeftSide = ({data}) => {
                             
                         })
                       }
-                  </div>
+                  </div>)}
             </div>
-            <div className="sidebar-msg">
+           { show?null:(<div className="sidebar-msg">
                 <div className="img">
                     <img src={delivery} alt="" />
                 </div>
                 <div className="text">
                     <h2>Safe Delivery <span>@</span> your doors</h2>
                 </div>
-            </div>
-            <div className="side-cart-area">
+            </div>)}
+           { show?null:(<div className="side-cart-area">
                 <div className="text">
                     <h4>Order Menu</h4>
                     <Link to='/cart'><p>Veiw All <BsFillArrowRightSquareFill/></p></Link>
@@ -67,7 +67,7 @@ const LeftSide = ({data}) => {
                       {cartItems.length>0&&<Link to="/cart"><button>PROCEED TO CHECKOUT</button></Link>}
                       </div>
                 </div>
-            </div>
+            </div>)}
            
             
         </div>

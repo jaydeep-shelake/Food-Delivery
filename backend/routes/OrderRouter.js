@@ -23,6 +23,11 @@ orderRouter.get('/',isAuth,expressAsyncHandler(async(req,res)=>{
     const orders = await Order.find({userId:req.user._id})
     res.send(orders)
 }))
+orderRouter.get('/admin-orders',expressAsyncHandler(async(req,res)=>{
+    const orders = await Order.find().sort({_id:-1}).limit(20)
+    res.send(orders)
+}))
+
 
 
 orderRouter.post('/',isAuth,expressAsyncHandler(async(req,res)=>{

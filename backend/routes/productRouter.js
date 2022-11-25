@@ -12,6 +12,8 @@ productRouter.get('/',expressAsyncHandler(async(req,res)=>{
   res.send(products)
 }));
 
+
+
 productRouter.get('/search',expressAsyncHandler(async(req,res)=>{
     let regEx = new RegExp(req.query.name,'i');
     const serachedProducts = await Product.find({name:regEx})
@@ -41,6 +43,18 @@ productRouter.post('/wishlist',isAuth,expressAsyncHandler(async(req,res)=>{
     const wishlistItem = await newItem.save();
     res.send(wishlistItem)
  }
+}))
+
+productRouter.post('/add-product',expressAsyncHandler(async(req,res)=>{
+    const newProduct = new Product({
+        name:req.body.name,
+        description:req.body.description,
+        image:req.body.image,
+        category:req.body.category,
+        price:req.body.price
+    })
+    const products = await newProduct.save();
+    res.send(products)
 }))
 
 productRouter.get('/wishlist',isAuth,expressAsyncHandler(async(req,res)=>{
