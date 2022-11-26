@@ -47,8 +47,16 @@ const AddProduct = () => {
                 <form onSubmit={handleSubmit}>
                     <input type="text" onChange={(e)=>setName(e.target.value)} name='name' placeholder='Product Name'  />
                     <input type="text" onChange={(e)=>setPrice(e.target.value)} name="price" id="" placeholder='Price'  />
-                    <input type="text" onChange={(e)=>setDes(e.target.value)} name='description' placeholder='description' />
-                    <input type="text" onChange={(e)=>setCategory(e.target.value)} name='category' placeholder='category' />
+                    <input type="text" onChange={(e)=>setDes(e.target.value)} name='description' placeholder='description' /> 
+                      <select onChange={(e)=>setCategory(e.target.value)} >
+                       <option value="">Category</option>
+                       <option value="pizza">pizza</option>
+                       <option value="Burger">burger</option>
+                       <option value="Sandwich">sandwich</option>
+                       <option value="Smoothy">smoothy</option>
+                       <option value="Snak">snak</option>
+                       <option value="Drink">drink</option>
+                      </select>
                     <label htmlFor="file">{fileName}</label>
                     <input type="file" id='file' onChange={handleOnChange} />
                     <button type="submit">{ loading?<Spinner/>:'Add'}</button>

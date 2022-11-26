@@ -33,7 +33,7 @@
   align-items: center;
   justify-content: center;
 }
-form input , form label {
+form input , form label , form select{
   border: none;
   outline: none;
   padding: 12px 10px;
