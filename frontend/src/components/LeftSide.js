@@ -16,7 +16,8 @@ const LeftSide = ({data ,show}) => {
     return (
         <div className='leftside'>
             <div className="header">
-                <div className="user-info">
+               {show&&<Link to="/add-product"> <button style={{marginRight:"10px"}}>Add Product</button></Link>}
+                {show?null:(<div className="user-info">
                     {
                         user?.user?(
                             <Link to="/profile"> <div className='user-profile-icon'>{user.user.name.charAt(0)}</div></Link>
@@ -24,7 +25,7 @@ const LeftSide = ({data ,show}) => {
                             <Link to="/signin"> <button>Login</button></Link>
                         )
                     }
-                </div>
+                </div>)}
                   <Link to="/cart"><div className="icon">
                       <span>{cartItems?cartItems?.length:0}</span>
                       <BsCart3/>

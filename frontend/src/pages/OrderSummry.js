@@ -205,10 +205,7 @@ if(!res){
                                 <p>Price</p>
                                 <p><span>₹</span>{cartPrice}</p>
                             </div>
-                            <div className="item">
-                                <p>Discount</p>
-                                <p>-<span>₹</span>{discount}</p>
-                            </div>
+                           
                             <div className="item">
                                 <p>Delivery Charges</p>
                                 <p>{deleviryPrice===0?<span className='free'>Free</span>:<span>₹{deleviryPrice}</span>}</p>
