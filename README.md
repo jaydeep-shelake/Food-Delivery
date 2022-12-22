@@ -40,4 +40,4 @@
 
 ### LINK :
 
-https://mern-food-delivery-app.herokuapp.com
+https://rio-ci4k.onrender.com/
