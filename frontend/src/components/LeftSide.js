@@ -26,10 +26,10 @@ const LeftSide = ({data ,show}) => {
                         )
                     }
                 </div>)}
-                  <Link to="/cart"><div className="icon">
+                  {show?null:(<Link to="/cart"><div className="icon">
                       <span>{cartItems?cartItems?.length:0}</span>
                       <BsCart3/>
-                  </div></Link>
+                  </div></Link>)}
                   <div className="icon" onClick={()=>setShow(!showNoti)} >
                     
                   {  data?.length===undefined?null:<span>{data?.filter(item=>item.inStockItem<=3).length} </span>}

@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 const firebaseApp = initializeApp(
     {
-        apiKey: "AIzaSyBt7OBxloR5msnBLguu_ismttaIz4OL_wo",
-  authDomain: "ora-web-14023.firebaseapp.com",
-  projectId: "ora-web-14023",
-  storageBucket: "ora-web-14023.appspot.com",
-  messagingSenderId: "1057140990013",
-  appId: "1:1057140990013:web:596ef7112d9afc39b24a54"
+      apiKey: "AIzaSyCpm-D0Qi5--F5LAeYhAbA7ySTodniEQZk",
+      authDomain: "riocafe-d1983.firebaseapp.com",
+      projectId: "riocafe-d1983",
+      storageBucket: "riocafe-d1983.appspot.com",
+      messagingSenderId: "753576064002",
+      appId: "1:753576064002:web:cc28b4d82b5cf20ae4231b"
     }
 );
 
@@ -19,7 +19,7 @@ const firebaseApp = initializeApp(
  export const auth = getAuth(firebaseApp)
 export const storage = getStorage(firebaseApp)
  export const db={
-    pizzas:'pizzas',
+    pizzas:'allProducts',
     
     formatedDoc:doc=>{
       return{id:doc.id,...doc.data()}
